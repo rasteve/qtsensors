@@ -17,9 +17,8 @@ target_link_libraries(sensorsdocsnippet PUBLIC
 )
 
 if (GCC AND UNIX)
-    target_link_libraries(sensorsdocsnippet PUBLIC
-        rdynamic
-        log
+    target_link_options(sensorsdocsnippet PUBLIC
+        -rdynamic
     )
 endif()
 
